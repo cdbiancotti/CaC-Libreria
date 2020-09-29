@@ -1,0 +1,279 @@
+/* GLOBAL */
+body {
+  background-image: url('./img/madera.jpg');
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #fffac8;
+  margin: 0;
+  text-shadow: 0 0 10px #000000;
+}
+
+.woTema {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.drama {
+  background-color: rgb(140, 50, 50, 0.7);
+}
+
+.cFiccion {
+  background-color: #2f4f4fb3;
+}
+
+.infantiles {
+  background-color: rgb(70, 100, 40, 0.7);
+}
+
+.terror {
+  background-color: rgb(90, 80, 90, 0.7);
+}
+
+a {
+  text-decoration: none;
+  color: #fffac8;
+}
+
+ul {
+  font-size: 20px;
+}
+
+.dt {
+  color: rgb(140, 50, 50);
+}
+
+.tt {
+  color: rgb(90, 80, 90);
+}
+
+.ct {
+  color: darkslategray;
+}
+
+.it {
+  color: rgb(70, 100, 40);
+}
+
+.lt {
+  color: black;
+}
+
+/* HEADER */
+header {
+  padding: 0.5em 1em;
+  background-image: url('./img/header.jpg');
+  background-position: center;
+  background-size: cover;
+  font-size: 2em;
+}
+
+header h1 {
+  margin: 0;
+  box-shadow: 0 0 10px #000000;
+  font-weight: bolder;
+  border: 4px solid;
+}
+
+/* NAV */
+nav {
+  padding: 10px;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav ul > li {
+  display: inline-flex;
+  padding: 15px 25px;
+  margin-bottom: 5px;
+}
+
+nav .here,
+nav ul > li:hover {
+  padding-bottom: 7px;
+  border-bottom: 8px solid #ffffffe6;
+  font-weight: 900;
+}
+
+/* MAIN */
+main h2 {
+  /* font-size: 60px; */
+  width: fit-content;
+  border: 10px dotted black;
+  animation-name: colorBorderChange;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+@keyframes colorBorderChange {
+  0%,
+  100% {
+    border-color: white;
+    text-shadow: 0 0 10px #000000;
+  }
+  50% {
+    border-color: black;
+    text-shadow: 0 0 10px #ffffff;
+  }
+}
+
+main > section > a {
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 5px;
+  background-color: black;
+}
+
+main > section > a:hover {
+  color: black;
+  background-color: rgb(255, 250, 200);
+}
+
+/* FOOTER */
+footer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  color: #fffac8;
+  width: calc(100% - 20px);
+  font-size: 20px;
+  background-image: url('./img/header.jpg');
+  background-position: bottom;
+  background-size: cover;
+}
+
+footer a:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+footer ul {
+  width: 20%;
+  align-self: flex-start;
+}
+
+footer li {
+  text-align: left;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  font-size: 54px;
+}
+
+/* ======================================================================= */
+
+@media (max-width: 550px) {
+  /* NAV */
+  nav ul li {
+    width: 20%;
+  }
+}
+@media (max-width: 700px) {
+  /* FOOTER */
+  footer ul {
+    width: 30%;
+  }
+  footer div:first-child {
+    width: 40%;
+    font-size: 36px;
+  }
+  footer div {
+    width: 60%;
+  }
+}
+/* fin media max 700 */
+
+@media (min-width: 1600px) {
+  /* HEADER */
+  header {
+    font-size: 3em;
+  }
+
+  /* MAIN */
+  main.index-page h2 {
+    padding: 0 10px;
+    margin: 0.5em;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  main.index-page section {
+    width: 33%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main.gender-page section {
+    width: 25%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main h2 {
+    font-size: 60px;
+    border: 10px dotted black;
+  }
+
+  .link-seccion {
+    font-size: 32px;
+    margin-bottom: 3%;
+  }
+
+  .title {
+    margin: 4% 1% 0 1%;
+    font-size: 40px;
+    text-decoration: underline;
+  }
+
+  .description {
+    font-size: 20px;
+    margin: 5%;
+    text-align: justify;
+  }
+
+  .price {
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: none;
+  }
+
+  .tapa {
+    height: 50%;
+    width: 60%;
+  }
+
+  .map {
+    margin: 10%;
+    height: 90%;
+    width: 90%;
+  }
+
+  button {
+    font-size: 20px;
+    font-weight: 100;
+    padding: 2% 1%;
+    margin-bottom: 5%;
+    float: center;
+  }
+}
+/* fin media min 1600 */
+
+@media (min-width: 1260px) {
+  /* HEADER */
+  header {
+    font-size: 2.5em;
+  }
+}
+/* fin media min 1260 */
