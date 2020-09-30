@@ -1,6 +1,6 @@
 /* GLOBAL */
 body {
-  background-image: url('./img/madera.jpg');
+  background-image: url('../img/madera.jpg');
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #fffac8;
@@ -8,23 +8,32 @@ body {
   text-shadow: 0 0 10px #000000;
 }
 
-.woTema {
+li.woTema,
+main.locales-page.woTema section {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.drama {
+section.drama,
+li.drama,
+main.gender-page.drama section {
   background-color: rgb(140, 50, 50, 0.7);
 }
 
-.cFiccion {
+section.cFiccion,
+li.cFiccion,
+main.gender-page.cFiccion section {
   background-color: #2f4f4fb3;
 }
 
-.infantiles {
+section.infantiles,
+li.infantiles,
+main.gender-page.infantiles section {
   background-color: rgb(70, 100, 40, 0.7);
 }
 
-.terror {
+section.terror,
+li.terror,
+main.gender-page.terror section {
   background-color: rgb(90, 80, 90, 0.7);
 }
 
@@ -60,7 +69,7 @@ ul {
 /* HEADER */
 header {
   padding: 0.5em 1em;
-  background-image: url('./img/header.jpg');
+  background-image: url('./../img/header.jpg');
   background-position: center;
   background-size: cover;
   font-size: 2em;
@@ -96,8 +105,15 @@ nav ul > li:hover {
 }
 
 /* MAIN */
+
+main {
+  padding: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 main h2 {
-  /* font-size: 60px; */
   width: fit-content;
   border: 10px dotted black;
   animation-name: colorBorderChange;
@@ -116,6 +132,68 @@ main h2 {
     border-color: black;
     text-shadow: 0 0 10px #ffffff;
   }
+}
+
+main.index-page section,
+main.gender-page section {
+  width: 430px;
+  margin: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-bottom: 3%;
+}
+
+.title {
+  margin: 4% 1% 0 1%;
+  text-decoration: underline;
+}
+
+.tapa {
+  height: 50%;
+}
+
+.description {
+  margin: 5%;
+  padding-bottom: 5%;
+  text-align: justify;
+}
+
+.link-seccion {
+  margin-bottom: 3%;
+  position: absolute;
+  bottom: 0;
+}
+
+.price {
+  /* font-size: 30px; */
+  font-weight: bolder;
+  font-family: none;
+}
+
+main.locales-page.woTema section {
+  width: 60%;
+  display: flex;
+  margin-bottom: 5%;
+}
+main.locales-page.woTema {
+  display: block;
+}
+main.locales-page.woTema section:nth-child(2n) {
+  float: right;
+}
+.map {
+  margin: 10%;
+  height: 200px;
+}
+
+button {
+  font-size: 20px;
+  font-weight: 100;
+  padding: 2% 1%;
+  margin-bottom: 5%;
+  float: center;
 }
 
 main > section > a {
@@ -138,7 +216,7 @@ footer {
   color: #fffac8;
   width: calc(100% - 20px);
   font-size: 20px;
-  background-image: url('./img/header.jpg');
+  background-image: url('./../img/header.jpg');
   background-position: bottom;
   background-size: cover;
 }
@@ -173,7 +251,12 @@ footer div {
     width: 20%;
   }
 }
+/* fin media max 550 */
+
 @media (max-width: 700px) {
+  main h2 {
+    font-size: 40px;
+  }
   /* FOOTER */
   footer ul {
     width: 30%;
@@ -188,7 +271,15 @@ footer div {
 }
 /* fin media max 700 */
 
-@media (min-width: 1600px) {
+@media (min-width: 900px) {
+  /* HEADER */
+  header {
+    font-size: 2.5em;
+  }
+}
+/* fin media min 900 */
+
+@media (min-width: 1260px) {
   /* HEADER */
   header {
     font-size: 3em;
@@ -200,80 +291,24 @@ footer div {
     margin: 0.5em;
   }
 
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-
-  main.index-page section {
-    width: 33%;
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   main.gender-page section {
     width: 25%;
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   main h2 {
     font-size: 60px;
-    border: 10px dotted black;
-  }
-
-  .link-seccion {
-    font-size: 32px;
-    margin-bottom: 3%;
   }
 
   .title {
-    margin: 4% 1% 0 1%;
     font-size: 40px;
-    text-decoration: underline;
   }
 
   .description {
     font-size: 20px;
-    margin: 5%;
-    text-align: justify;
   }
 
-  .price {
-    font-size: 30px;
-    font-weight: bolder;
-    font-family: none;
-  }
-
-  .tapa {
-    height: 50%;
-    width: 60%;
-  }
-
-  .map {
-    margin: 10%;
-    height: 90%;
-    width: 90%;
-  }
-
-  button {
-    font-size: 20px;
-    font-weight: 100;
-    padding: 2% 1%;
-    margin-bottom: 5%;
-    float: center;
-  }
-}
-/* fin media min 1600 */
-
-@media (min-width: 1260px) {
-  /* HEADER */
-  header {
-    font-size: 2.5em;
+  .link-seccion {
+    font-size: 32px;
   }
 }
 /* fin media min 1260 */
