@@ -1,4 +1,7 @@
 /* GLOBAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 body {
   background-image: url('../img/madera.jpg');
   text-align: center;
@@ -116,6 +119,8 @@ main {
 main h2 {
   width: fit-content;
   border: 10px dotted black;
+  /* animation: ; */
+  /* -webkit-animation: ; */
   animation-name: colorBorderChange;
   animation-iteration-count: infinite;
   animation-duration: 2s;
@@ -158,6 +163,7 @@ main.gender-page section {
   margin: 5%;
   padding-bottom: 5%;
   text-align: justify;
+  font-family: 'Raleway', Georgia, 'Times New Roman', Times, serif;
 }
 
 .link-seccion {
@@ -206,6 +212,17 @@ main > section > a {
 main > section > a:hover {
   color: black;
   background-color: rgb(255, 250, 200);
+}
+main > section > a:hover .fas.fa-door-closed {
+  display: none;
+}
+
+main > section > a:hover .fas.fa-door-open {
+  display: inline;
+}
+
+main > section > a .fas.fa-door-open {
+  display: none;
 }
 
 /* FOOTER */

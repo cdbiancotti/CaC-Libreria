@@ -1,0 +1,17 @@
+@keyframes asd {
+  from {
+    top: -150;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+  0% {
+  }
+  25% {
+  }
+}
+
+@-webkit-keyframes asd {
+}
